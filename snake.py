@@ -1,7 +1,6 @@
 """Class representing snake chracter."""
 from enum import Enum
 
-
 class Snake:
     """Object representing snake."""
 

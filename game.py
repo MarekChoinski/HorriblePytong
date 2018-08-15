@@ -67,7 +67,6 @@ class Game:
 
         while True:
             self.choosen_map = self._show_menu()
-            # self._show_dead_screen("doubly diagonalized", 15.5)
             # print(self._show_menu.__doc__)
 
             self.snake = Snake(self.maps[self.choosen_map]["start_position"], Game.size_of_map)
@@ -133,7 +132,6 @@ class Game:
                 # walls
                 if field == 1:
                     rect = x*self.size_of_tile, y*self.size_of_tile, self.size_of_tile, self.size_of_tile
-                    #pygame.draw.rect(self.window, Game.color_tile, rect)
                     self.window.blit(self.wall, rect)
         
         self._respawn_point()
@@ -145,7 +143,6 @@ class Game:
         # snake body
         for y,x in self.snake.body:
             rect = x*self.size_of_tile, y*self.size_of_tile, self.size_of_tile, self.size_of_tile
-            # pygame.draw.rect(self.window, Game.color_snake_body, rect)
             self.window.blit(self.segment_img, rect)
         
         # head
@@ -166,7 +163,7 @@ class Game:
         # TODO known error "Surfaces must not be locked during blit"
         # Probably occurs when points is textured with some function and
         # at the same time texture is changed here
-        
+
         frames = [
             ("point", 2),
             ("point2", 0.2),
