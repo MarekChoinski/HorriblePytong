@@ -24,7 +24,7 @@ class Game:
 
     dead_texts = [
         "Your corpse was thrown away!",
-        "The garbage truch arrived!",
+        "The garbage truck arrived!",
         "The dogs ate your corpse!",
         "Why did someone created you?"
     ]
