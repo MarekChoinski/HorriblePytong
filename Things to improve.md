@@ -3,12 +3,14 @@
 ## undone
 
 - [ ] Solve error with pylint
-- [x] Error control
 - [ ] Make game exetutable
 - [ ] Surfaces must not be locked during blit
+- [ ] Resources in separate folders
 
 ## done
 
+- [x] Add FPS control
+- [x] Error control
 - [x] Add music
 - [x] Check if wolphram music would fit
 - [x] Better graphics

@@ -90,6 +90,8 @@ class Game:
             self.is_snake_dead = False
             # starts timer
             self.start_timer = datetime.datetime.now()
+
+            game_clock = pygame.time.Clock()
             
             while self.game_is_running:
                 for event in pygame.event.get():
@@ -113,6 +115,7 @@ class Game:
                 self._draw_map()
 
                 pygame.display.flip()
+                game_clock.tick(60)
 
             if self.is_snake_dead:
                 # end timer
@@ -180,9 +183,7 @@ class Game:
                 self.point_img = pygame.image.load(name+".png")
                 self.point_img = pygame.transform.scale(self.point_img, (self.size_of_tile, self.size_of_tile))
                 time.sleep(duration)
-                
 
-        
 
     def _respawn_point(self):
         """Spawns point in random place on map."""
